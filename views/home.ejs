@@ -4,20 +4,22 @@
 <body>
     <%- include('./partials/header.ejs') %>
     <main>
-        <h2>Today's Blogs</h2>
+        <h2>Crime List</h2>
         <%
-        if (blogs.length > 0) {
-            blogs.forEach(blog=>{
+        if (crimes.length > 0) {
+            crimes.forEach(crime=>{
                 %>
-                <a class="single-blog" href="/blogs/<%= blog._id %>">
-                    <h4><%=blog.title%></h4>
-                    <p><%=blog.description%></p>
+                <div class="crime">
+                <a class="single-crime" href="/crimes/<%= crime._id %>">
+                    <h4><%=crime.title%></h4>
+                    <p><%=crime.location%> | <%=crime.dateandtime%> </p>
                 </a>
+                </div>
                 <hr>
                 <%
                     })} else {
                 %>
-                <p>There are no blogs here :( </p>
+                <p>There are no crimes here :( </p>
                 <% } %> 
     </main>
     <%- include('./partials/footer.ejs') %>

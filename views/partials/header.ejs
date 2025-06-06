@@ -1,9 +1,20 @@
 <header>
-    <h1><a href="/">Blogs Today</a></h1>
+    <div class="welcome">
+        <h1><a href="/">CRMS</a></h1>
+        <% if (user) { %>
+            <div class="user-welcome">Welcome, <%= user.username %></div>
+        <% } %>
+    </div>
     <nav>
         <p><a href="/">Home</a></p>
-        <p><a href='/about'>About Us</a></p>
-        <p><a href="/blogs/create">Create Blog</a></p>
+        <p><a href="/about">About Us</a></p>
+        <% if (user) { %>
+            <p><a href="/crimes/report">Report Crime</a></p>
+            <p><a href="/logout">Logout</a></p>
+        <% } else { %>
+            <p><a href="/login">Login</a></p>
+            <p><a href="/signup">Sign Up</a></p>
+        <% } %>
     </nav>
 </header>
-<hr>
+

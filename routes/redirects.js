@@ -3,11 +3,11 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/home',(req,res)=>{
-    res.redirect('/blogs');
+    res.redirect('/crimes');
 })
 
 router.get('/',(req,res)=>{
-    res.redirect('/blogs');
+    res.redirect('/crimes');
 })
 
 router.get('/index',(req,res)=>{
@@ -18,8 +18,8 @@ router.get('/aboutus',(req,res)=>{
     res.redirect('/about');
 })
 
-router.get('/createblog',(req,res)=>{
-    res.redirect('/create');
+router.get('/reportcrime',(req,res)=>{
+    res.redirect('/report');
 })
 
 module.exports = router;

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/header.ejs') %>
+    <main>
+        <form action="/crimes" method="POST">
+            <label for="title">Crime Type</label>
+            <input type="text" id="title" name="title">
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location"></input>
+            <label for="dateandtime">Date and Time:</label>
+            <input type="text" id="dateandtime" name="dateandtime"></input>
+            <label for="description">Crime Description:</label>
+            <textarea id="description" name="description"></textarea>
+            <button class="submit">Submit</button>
+        </form> 
+    </main>
+    <%- include('./partials/footer.ejs') %>
+
+</body>
+</html>
