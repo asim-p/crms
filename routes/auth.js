@@ -5,7 +5,7 @@ const bcrypt = require('bcryptjs');
 
 // GET login page
 router.get('/login', (req, res) => {
-    res.render('auth/login', { title: 'Login' });
+    res.render('auth/login', { title: 'Login', error: null });
 });
 
 // POST login form
@@ -16,20 +16,19 @@ router.post('/login', async (req, res) => {
         const foundUser = await User.findOne({ username });
 
         if (!foundUser) {
-            return res.redirect('/login');
+            return res.render('auth/login', { title: 'Login', error: 'Invalid username or password.' });
         }
 
         const match = await foundUser.comparePassword(password);
-
         if (match) {
             req.session.user = { username: foundUser.username, _id: foundUser._id };
             return res.redirect('/dashboard');
         } else {
-            return res.redirect('/login');
+            return res.render('auth/login', { title: 'Login', error: 'Invalid username or password.' });
         }
     } catch (err) {
         console.error(err);
-        return res.redirect('/login');
+        res.render('auth/login', { title: 'Login', error: 'Something went wrong. Please try again.' });
     }
 });
 
