@@ -40,28 +40,75 @@ The **Crime Record Management System** is a full-stack web application built usi
 - **Styling**: Google Fonts, Font Awesome, Custom CSS
 
 ---
-
 ## 📁 Folder Structure
 
+```text
 Crime Record/
 ├── app.js
 ├── routes/
-│ ├── auth.js
-│ └── crimeRoutes.js
+│   ├── auth.js
+│   └── crimeRoutes.js
 ├── controllers/
-│ └── crimeController.js
+│   └── crimeController.js
 ├── models/
-│ └── user.js
+│   └── user.js
 ├── public/
-│ └── styles.css
+│   └── styles.css
 ├── views/
-│ ├── auth/
-│ │ ├── login.ejs
-│ │ └── signup.ejs
-│ ├── crimes/
-│ │ ├── index.ejs
-│ │ └── details.ejs
-│ └── partials/
-│ ├── head.ejs
-│ ├── header.ejs
-│ └── footer.ejs
+│   ├── auth/
+│   │   ├── login.ejs
+│   │   └── signup.ejs
+│   ├── crimes/
+│   │   ├── index.ejs
+│   │   └── details.ejs
+│   └── partials/
+│       ├── head.ejs
+│       ├── header.ejs
+│       └── footer.ejs
+```
+
+---
+
+## 🛠️ Getting Started
+
+### Prerequisites
+
+- Node.js and npm
+- MongoDB Atlas account
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/your-new-repo.git
+   cd Crime\ Record
+
+2. Install dependencies:
+
+    ```bash
+    npm install
+
+3. Set up your MongoDB connection in app.js or create a .env file if using dotenv.
+
+4. Start the server:
+
+    ```bash
+    npm start
+
+5. Visit http://localhost:3000 in your browser.
+
+## 🔐 Admin Access
+
+To access delete functionality:
+
+    Login with a user having the username admin
+
+    Only this user will see the delete buttons on crime records
+
+## ✅ To Do
+
+    Add client-side and server-side validation
+
+    Implement user-specific dashboards
+
+    Improve flash messaging and error feedback
