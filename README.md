@@ -80,8 +80,8 @@ Crime Record/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/your-new-repo.git
-   cd Crime\ Record
+   git clone [https://github.com/asim-p/crms](https://github.com/asim-p/crms)
+   cd crms\
 
 2. Install dependencies:
 
